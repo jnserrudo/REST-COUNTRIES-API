@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body" class="body">
+    <header class="header" id="header">
+        <p class="header__titulo">Where in the world?</p>
+        <button class="header__btnmodo" id="btnmodo">
+            <img src="./assets/luna.svg" id="imgluna" class="header__btnmodo__img" alt="luna">
+            <p class="header__btnmodo__txt">Dark Mode</p>
+        </button>
+    </header>
+    <main class="main">
+
+        <div class="main__search">
+            <div class="main__search__cont_input" id="continput">
+                <img src="./assets/lupa.svg" id="imglupa" class="main__search__cont_input__img" alt="lupa">
+                <input type="text" id="input" class="main__search__cont_input__input" placeholder="Search for a country..." >
+            </div>
+            <select name="region" id="select" class="main__search__select" id="select_region">
+                <option value="" selected disabled hidden>Filter by Region</option>
+                <option value="">Africa</option>
+                <option value="">America</option>
+                <option value="">Asia</option>
+                <option value="">Europa</option>
+                <option value="">Oceania</option>
+
+            </select>
+        </div>
+
+        <div class="main__banderas" id="main_banderas">
+            <div class="main__banderas__band">
+                <img src="https://flagcdn.com/ar.svg" class="main__banderas__band__img" alt="imagen bandera">
+                <div class="main__banderas__band__detalle">
+                    <p class="lbl_namepais">Name Pais</p>
+                    <div class="main__banderas__band__detalle__poblacion">
+                        <p class="lbl_detalle">Population: </p>
+                        <p class="">1561120</p>
+                    </div>
+                    <div class="main__banderas__band__detalle__region">
+                        <p class="lbl_detalle">Region: </p>
+                        <p>Europe</p>
+                    </div>
+                    <div class="main__banderas__band__detalle__capital">
+                        <p class="lbl_detalle">Capital: </p>
+                        <p>Berlin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <p id="dea"></p>
+
+        <p id="dea2"></p>
+        <p id="dea3"></p> -->
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script type="module" src="./js/api.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

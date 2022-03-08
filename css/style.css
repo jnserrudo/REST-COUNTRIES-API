@@ -1,0 +1,294 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+   --sombra:hsl(185, 11%, 89%);
+   --sombra2:hsl(180, 4%, 10%);
+
+   --dark1:hsl(207, 26%, 17%);
+   --dark2:hsl(209, 23%, 22%)
+}
+@font-face {
+    font-family: "NunitoSans";
+    src: url(../fonts/Nunito_Sans/NunitoSans-Regular.ttf);
+}
+.body{
+    margin:0;
+   font-family: "NunitoSans",sans-serif;
+
+    /* 
+    background-image: radial-gradient(circle,violet,purple);
+    display: flex;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    justify-content: center; */
+}
+.body--dark{
+    background-color: var(--dark1);
+    color: white;
+}
+img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    
+}
+
+.header{
+    display: flex;
+    font-weight:900;
+    justify-content: space-between;
+    box-shadow: 1px 2px 5px 3px var(--sombra);
+    padding: 0 1rem;
+}
+.header--dark{
+    background-color: var(--dark2);
+    box-shadow: 1px 2px 5px 3px var(--sombra2);
+
+}
+.header__btnmodo {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    font-family: "NunitoSans",sans-serif;
+    font-weight: 600;
+     /* border: 0.1px gray solid; 
+     border-radius: 5px;  */
+     outline:none;
+     text-decoration: none;
+     border:none;
+
+    height: 50px;
+    width: 120px;
+
+}
+.header__btnmodo__img{
+    height: 20px;
+    
+    width: 20px;
+}
+
+.main{
+    margin:2rem;
+}
+.main__search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+.main__search__cont_input{
+    display: flex;
+    
+    /* padding: 1rem 2rem; */
+    align-items: center;
+    /* justify-content: center; */
+    height: 60px;
+    width: 100%;
+    /* border: 2px black solid; */
+    box-shadow: 0px 0px 1px 2px var(--sombra);
+}
+
+
+.main__search__cont_input__img{
+    height: 20px;
+    width: 20px;
+    margin: 0 1rem
+}
+.main__search__cont_input__input{
+    border: none;
+    /* font-weight: 100; */
+    height: 40px;
+    width: 80%;
+}
+
+.main__search__select{
+    font-weight: 700;
+    height: 50px;
+    width: 70%;
+    padding: 0 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* ver que debo asignar el color de fondo  del select */
+    background-color: white;
+    background-image: url("../assets/flecha.svg"); 
+    background-position: 90% center; 
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border: none;
+    box-shadow: 0px 0px 3px 5px var(--sombra);
+
+}
+
+.main__banderas{
+    display: grid;
+    /* border: 2px black solid; */
+
+    grid-template-columns:  repeat(auto-fill,minmax(255px,1fr));
+    grid-auto-rows:  310px;
+    gap: 4rem;
+    margin: 1rem auto;
+    padding: 0 1.2rem;
+
+}
+.main__banderas__band{
+    display: flex;
+    /* border: 2px black solid; */
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 3px 5px var(--sombra);
+
+    flex-direction: column;
+    /* margin: 1rem 0; */
+    margin-top: 1rem;
+}
+
+.main__banderas__band__img{
+    height: 150px; ;
+}
+.main__banderas__band__detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    /* border: 2px black solid; */
+    padding-left: 1.5rem;
+
+
+}
+
+.main__banderas__band__detalle__poblacion, .main__banderas__band__detalle__region,
+ .main__banderas__band__detalle__capital{
+    display: flex;
+    height: 2rem;
+    align-items: center;
+}
+
+.lbl_namepais{
+    font-weight: 900;
+    font-size: 1.2rem;
+    height: 2rem;
+    margin: 0.5rem 0;
+}
+
+.lbl_detalle{
+    font-weight: 600;
+    margin-right: 0.3rem;
+}
+
+/* modo oscuro mobile */
+
+.main__search__select--dark{
+    background-color: var(--dark2);
+    color: white;
+    background-image: url("../assets/flecha--dark.svg"); 
+
+    box-shadow: 1px 2px 5px 3px var(--sombra2);
+}
+.main__search__cont_input--dark{
+    background-color: var(--dark2);
+
+    box-shadow: 1px 2px 5px 3px var(--sombra2);
+}
+.main__search__cont_input__input--dark{
+    background-color: var(--dark2);
+}
+.main__search__cont_input__input--dark::placeholder{
+    color:white
+}
+
+.header__btnmodo--dark{
+    background-color: var(--dark2);
+    color: white;
+}
+
+.main__banderas__band--dark{
+    box-shadow: 0px 0px 1px 1px var(--sombra2);
+  
+}
+
+
+/*  */
+
+
+@media (min-width:1300px){
+
+    .main__banderas{
+        display: grid;
+        /* border: 2px black solid; */
+    
+        grid-template-columns:  repeat(auto-fill,minmax(240px,250px));
+        grid-auto-rows:  310px;
+        gap: 4rem;
+        margin: 1rem auto;
+        padding: 0 1.2rem;
+    
+    }
+    .main__search{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 150px;
+    }
+    .main__search__cont_input{
+        display: flex;
+        
+        /* padding: 1rem 2rem; */
+        align-items: center;
+        /* justify-content: center; */
+        height: 60px;
+        width: 40%;
+        /* border: 2px black solid; */
+        box-shadow: 0px 0px 1px 2px var(--sombra);
+    }
+    
+.main__search__select{
+    width: 20%;
+    padding: 0 2rem;
+
+    box-shadow: 0px 0px 3px 5px var(--sombra);
+
+}
+.main__search__select--dark{
+    background-color: var(--dark2);
+    color: white;
+    background-image: url("../assets/flecha--dark.svg"); 
+
+    box-shadow: 1px 2px 5px 3px var(--sombra2);
+}
+.main__search__cont_input--dark{
+    background-color: var(--dark2);
+
+    box-shadow: 1px 2px 5px 3px var(--sombra2);
+}
+.main__search__cont_input__input--dark{
+    background-color: var(--dark2);
+}
+.main__search__cont_input__input--dark::placeholder{
+    color:white
+}
+
+.header__btnmodo--dark{
+    background-color: var(--dark2);
+    color: white;
+}
+
+.main__banderas__band--dark{
+    box-shadow: 0px 0px 1px 1px var(--sombra2);
+  
+}
+
+}
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@ const btnmodo=document.getElementById('btnmodo')
 const body=document.getElementById('body')
 const header=document.getElementById('header')
 const continput=document.getElementById('continput')
-const input=document.getElementById('input')
+import {input} from "./export.js";
 const select=document.getElementById('select')
 const imglupa=document.getElementById('imglupa')
 const imgluna=document.getElementById('imgluna')

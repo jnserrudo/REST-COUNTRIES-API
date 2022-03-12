@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informacion de Paises</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/styleinfoband.css">
 
 </head>
 
@@ -17,8 +18,71 @@
             <p class="header__btnmodo__txt">Dark Mode</p>
         </button>
     </header>
+
+    <a href="./index.html" class="enlace_back"><img src="./assets/flecha-back.svg" id="imgflechaback" alt="flecha"><button class="btn_back" id="btnback">Back</button></a>
     <div class="main_detalle_pais" id="main_detalle_pais">
-        
+        <div class="main_detalle_pais__imgband">
+            <img src="" alt="bandera" class="imginfo" id="imginfo">
+        </div>
+        <div class="main_detalle_pais__info" id="main_detalle_pais__info">
+            <p class="lbl_namepais lbl_namepais_info" id="nom_pais"></p>
+            <div class="main_detalle_pais__info__det1" id="main_detalle_pais__info__det1">
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Native Name: </p>
+                    <p id="txt_nom_nativo"> </p>
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle">Population: </p>
+                    <p id="txt_poblacion"></p>
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Region: </p>
+                    <p id="txt_region"> </p>
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Sub Region: </p>
+                    <p  id="txt_subregion"></p>
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Capital: </p>
+                    <p id="txt_capital"></p>
+                </div>
+
+            </div>
+            <div class="main_detalle_pais__info__det2" id="main_detalle_pais__info__det2">
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Top Level Domain: </p>
+                    <p id="txt_dominio"></p>
+
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle">Currencies: </p>
+                    <p id="txt_moneda"> </p>
+
+                </div>
+
+                <div class="main_detalle_pais__info__det1__detalle">
+                    <p class="lbl_detalle" >Lenguages: </p>
+                    <p id="txt_lenguajes"></p>
+                </div>
+
+
+            </div>
+            
+            <div class="main_detalle_pais__info__limites" id="main_detalle_pais__info__limites">
+                <p class="lbl_detalle">Border Countries: </p>
+                <div class="main_detalle_pais__info__limites__btns" id="main_detalle_pais__info__limites__btns">
+
+                </div>
+            </div>
+        </div>
+
 
     </div>
     <footer class="footer">

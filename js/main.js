@@ -1,12 +1,9 @@
-const btnmodo=document.getElementById('btnmodo')
-const body=document.getElementById('body')
-const header=document.getElementById('header')
+
 const continput=document.getElementById('continput')
 import {input} from "./export.js";
 const select=document.getElementById('select')
 const imglupa=document.getElementById('imglupa')
-const imgluna=document.getElementById('imgluna')
-import {main_banderas} from "./export.js";
+import {main_banderas,btnmodo,body,header,imgluna} from "./export.js";
 
 btnmodo.addEventListener('click', ()=>{
     body.classList.toggle('body--dark')
@@ -40,7 +37,4 @@ btnmodo.addEventListener('click', ()=>{
         console.log(bandera1)
 
     }
-    
-    
-
 })

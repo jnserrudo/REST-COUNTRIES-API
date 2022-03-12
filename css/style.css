@@ -4,13 +4,17 @@
 :root{
    --sombra:hsl(185, 11%, 89%);
    --sombra2:hsl(180, 4%, 10%);
-
+    --sombra3:hsl(260, 1%, 50%);
    --dark1:hsl(207, 26%, 17%);
    --dark2:hsl(209, 23%, 22%)
 }
 @font-face {
     font-family: "NunitoSans";
     src: url(../fonts/Nunito_Sans/NunitoSans-Regular.ttf);
+}
+@font-face {
+    font-family: "NunitoSans-Black";
+    src: url(../fonts/Nunito_Sans/NunitoSans-Black.ttf);
 }
 .body{
     margin:0;

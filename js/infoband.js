@@ -46,16 +46,26 @@ const detallepais=async ()=>{
     txt_subregion.textContent=pais.subregion
     txt_capital.textContent=pais.capital
     txt_dominio.textContent=pais.topLevelDomain?.[0]
-    let monedas=[]
-    for(let mon of pais.currencies){
-        monedas.push(mon.name)
+    if(pais.currencies){
+        let monedas=[]
+        for(let mon of pais.currencies){
+            monedas.push(mon.name)
+        }
+        txt_moneda.textContent=monedas.join()
+    }else{
+        txt_moneda.textContent='No Currencies'
     }
-    txt_moneda.textContent=monedas.join()
-    let lengs=[]
-    for(let leng of pais.languages){
-        lengs.push(leng.name)
+    
+    if(pais.languages){
+        let lengs=[]
+        for(let leng of pais.languages){
+            lengs.push(leng.name)
+        }
+        txt_lenguajes.textContent=lengs.join()
+    }else{
+        txt_lenguajes.textContent='No lenguages'
     }
-    txt_lenguajes.textContent=lengs.join()
+    
     
     // creacion de los botones para los paises limites
     const fragment=document.createDocumentFragment()

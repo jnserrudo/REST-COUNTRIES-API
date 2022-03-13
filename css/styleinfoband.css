@@ -28,7 +28,10 @@
 
 .imginfo{
     min-width: 300px;
+    width: 100%;
     height: 220px;
+    border: 0.1px black solid;
+    border-radius: 5px;
 }
 .main_detalle_pais__info{
     display: grid;
@@ -102,5 +105,9 @@
     }
     .main_detalle_pais__info__limites{
         display: flex;
+    }
+    .imginfo{
+        width: 500px;
+        height: 300px;
     }
 }
